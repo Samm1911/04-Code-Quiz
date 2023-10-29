@@ -18,13 +18,13 @@ var thirdQuestionAnswers = [
   "1. numbers and strings",
   "2. other arrays",
   "3. booleans",
-  "4.all of the above",
+  "4. all of the above",
 ];
 var fourthQuestionAnswers = [
   "1. commas",
   "2. curly brackets",
   "3. quotes",
-  "4.parenthesis",
+  "4. parenthesis",
 ];
 var lastQuestionAnswers = [
   "1. JavaScript",
@@ -32,13 +32,14 @@ var lastQuestionAnswers = [
   "3. for loops",
   "4. console.log",
 ];
+
 var highScoreList = document.querySelector("#high-scores");
 var timer;
 var timerCount;
 var answerResult;
 var highScores = [];
 
-// When I click the start button, then a timer starts and I am presented with a question
+// When I click start button, then a timer starts and I am presented with a question
 /* If (start button is clicked) {
     timer starts
     first question } */
@@ -48,7 +49,7 @@ function startGame() {
   firstQuestion();
 }
 
-// Timer decrements seond by second until it reaches 0 and calls the game over function
+// Timer decrements second by second until it reaches 0 and calls the game over function
 function setTimer() {
   timer = setInterval(function () {
     timerCount--;
@@ -75,7 +76,7 @@ function firstQuestion() {
     answers.textContent = firstQuestionAnswers[i];
     answers.setAttribute("class", "question-buttons");
 
-    // listens for click on buttons two go to the second question
+    // listens for click on buttons to go to the second question
     answers.addEventListener("click", function (event) {
       /*If question answered {
     
